@@ -3,23 +3,21 @@
 <div class="main">
 </br>
 
-<div class="row1 col-md-5"></div>
-<div class="col-md-7">
+<div class="row1 col-md-3"></div>
+<div class="col-md-8">
 <table>
    <tr>
-       <th>Nom</th>
-       <th>Téléphone</th>
+       <th class="glyphicon glyphicon-user"> Nom</th>
+       <th>indicatif</th>
+       <th class="glyphicon glyphicon-phone-alt"> Téléphone</th>
    </tr>
 
    <tr ng-repeat="contact in vm.repertoires">
        <td>{{ contact.nom }}</td>
+       <td></td>
        <td>{{ contact.telephone }}</td>
    </tr>
 
-   <tr>
-       <td></td>
-       <td></td>
-   </tr>
 
 </table>
 
