@@ -1,0 +1,28 @@
+.main{
+	width:760px;
+	height: 300px;
+	margin: 0 auto;
+	background-color: gray;
+}
+
+.row1{
+	text-align: center;
+}
+
+.row2{
+	text-align: center;
+}
+
+h2{
+	text-align: center;
+}
+
+table{
+	background-color: #E08283;
+	text-align: center;
+    border-collapse: collapse;
+}
+
+td, th{
+    border: 1px solid black;
+}

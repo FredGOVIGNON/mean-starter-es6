@@ -1,5 +1,7 @@
 angular.module('app', ['ngRoute'])
-        .service('todoService', todoService)
+        .service('repertoireService', repertoireService)
         .controller('mainController', mainController)
         .config(routes)
         ;
+
+

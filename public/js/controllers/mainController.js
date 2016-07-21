@@ -1,33 +1,48 @@
 class mainController {
 
-    constructor(todoService) {
-        this.todoService = todoService;
+    constructor(repertoireService) {
+        this.repertoireService = repertoireService;
         this.load();
     }
 
     load() {
-        this.todoService.getAll().then((res) => {
-            this.todos = res.data;
+        this.repertoireService.getAll().then((res) => {
+            this.repertoires = res.data;
         })
     }
 
     create() {
-        this.todoService.create(this.todo).then(() => {
-            this.todo = '';
+        this.repertoireService.create(this.repertoire).then(() => {
+            this.repertoire = '';
             this.load()
         })
     }
 
-    update(todo) {
-        this.todoService.update(todo._id, todo.description).then(() => {
+    update(repertoire) {
+        this.repertoireService.update(repertoire._id, repertoire).then(() => {
             this.load()
         })
     }
 
-    delete(todo) {
-        this.todoService.delete(todo._id).then(() => {
+    delete(repertoire) {
+        this.repertoireService.delete(repertoire._id).then(() => {
             this.load()
         })
     }
 
 }
+
+// function mainController($scope) {
+//         $scope.nom = 'Nom';
+//         $scope.telephone = 'Telephone';
+
+// $scope.repertoire=[]
+//     $scope.add = function(){
+//         $scope.repertoire.push({
+//             nom:$scope.nom, 
+//             telephone:$scope.telephone
+//         })
+//     }
+
+//     }
+
